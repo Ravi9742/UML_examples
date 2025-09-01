@@ -1,0 +1,46 @@
+A set of three UML diagrams, to create the design for the simulation of an animal zoo using the following diagram types:
+• UML Class Diagram
+• UML Use Case Diagram
+• UML Activity Diagram
+
+UML Class Diagram:
+The Zoo simulation includes the following elements. Animals, including three species – Pachyderm, Feline, and Bird. Within the three species there are three different animal types. For Pachyderms, we have Rhino, Elephant, and Hippo. For Feline, we have Tiger, Lion, and Cheetah. For Birds, we have Parrot, Falcon, Owl. This should be represented in a class inheritance hierarchy with Animal as an Abstract Class with children representing the three species. Each species will have children objects representing the animal types.
+
+All animals have attributes Healthy and Name. All animals have the methods eat, sleep, roam, and makeSound. Eat and sleep methods are common to all animals. Roam varies by species. makeSound varies by animal type. Methods and attributes should be included in the UML class diagram for the Animal hierarchy. Each species also has an attribute called Location, which can either refer to an Enclosure or the Hospital (see below).
+
+The Zoo has an aggregation of Animals associated with it. The Zoo also has references to Buildings. There are three Building types – Enclosures, Shops, and a Hospital. There are three Enclosures, one for each species. There is one Hospital. There are Four Shop types - Tickets, Drinks, Food, and Gifts.
+
+Finally, there are People associated with the Zoo – People are of four types: Visitors, Managers, Vendors, Handlers, and Veterinarians. People have a Name and a Location attribute. Location can refer to any Building type. People have a method called goTo that will take a specific Destination as an argument. Vendors have an additional method called sell. Handlers have three methods – feed, exercise, examine. Veterinarians have the method heal and lecture. Managers have the closeZoo and openZoo methods.
+
+Your UML Class Diagram should show the relationships between these elements as you can best arrange them. Your diagram should use class names, methods and attributes, association lines, inheritance lines, and aggregation/composition lines as needed. You do not have to show accessibility notation or types (like String or int) in your diagram.
+
+UML Use Case Diagram:
+The UML Use Case diagram will examine what Visitors to the Zoo can do. Visitors would like to perform the following tasks. Visitor actors can:
+• Visit the Ticket Shop, and optionally, Buy a Ticket
+• Enter the Zoo, this requires the action Show a Valid Ticket
+• Once Enter the Zoo is performed, Visitors can select from tasks
+o Visit an Enclosure – with an option to Feed an Animal
+o Visit a Shop – with an option to Make a Purchase
+o Visit the Hospital – with an option to Listen to a Science Lecture
+o Leave the Zoo
+
+UML Activity Diagram:
+The UML Activity Diagram will show the flow of a typical day’s activity for the simulation of the Zoo. It will assume that the Zoo is already initialized with all Objects needed for the daily operations.
+The steps for the UML Activity diagram should include:
+• A Manager arrives
+• The following activities occur in parallel
+o Vendors will arrive and be assigned to Shops
+o Handlers will arrive and be assigned to Enclosures
+o A Veterinarian arrives and is assigned to the Hospital
+• The Manager will open the Zoo
+• In parallel
+o Visitors will arrive at the Zoo and optionally visit Enclosures, Shops, Hospital, or Leave the Zoo
+o Vendors will sell items from their Shop
+o Handlers will feed, exercise, and examine Animals
+  	There is a chance that the examine step may require sending a sick Animal to the Hospital
+o Veterinarians will heal and lecture
+• All Visitors will Leave the Zoo
+• A Manager will close the Zoo
+• Veterinarians will return any healed Animals to Enclosures
+• All Vendors, Handlers, and Veterinarians will Leave the Zoo
+• The Manager will Leave the Zoo
